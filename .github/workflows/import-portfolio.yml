@@ -1,0 +1,54 @@
+name: Import portfolio from temporary transfer
+
+on:
+  push:
+    paths:
+      - '.github/workflows/import-portfolio.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download verified portfolio package
+        env:
+          DRIVE_FILE_ID: 1gzF5SKlfc_8cV0f3M8XY1tJ-gwqXPRrT
+          EXPECTED_SHA256: 020a4f0506fa6d45ff7d958d8b638c258f886255c018c7146de23ff1bfa03aed
+        run: |
+          python -m pip install --disable-pip-version-check gdown==5.2.0
+          gdown --id "$DRIVE_FILE_ID" -O /tmp/portfolio.zip
+          echo "$EXPECTED_SHA256  /tmp/portfolio.zip" | sha256sum -c -
+      - name: Extract only public site files
+        run: |
+          python - <<'PY'
+          import pathlib, zipfile
+          root = pathlib.Path.cwd().resolve()
+          allowed = {'.nojekyll','GITHUB-UPLOAD-INSTRUCTIONS.md','ORIGINAL-ASSETS-SHA256.json','README-GITHUB-PAGES.md','favicon.svg','file.svg','globe.svg','index.html','script.js','style.css','window.svg','api/scholar.json'}
+          with zipfile.ZipFile('/tmp/portfolio.zip') as archive:
+              entries = [entry for entry in archive.infolist() if not entry.is_dir()]
+              assert len(entries) == 41, f"Unexpected file count: {len(entries)}"
+              for entry in entries:
+                  name = entry.filename
+                  assert name in allowed or name.startswith('assets/'), f"Unapproved file: {name}"
+                  assert not name.startswith('/') and all(part not in ('', '..') for part in pathlib.PurePosixPath(name).parts), f"Unsafe path: {name}"
+                  target = (root / name).resolve()
+                  assert target.is_relative_to(root)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(entry))
+          assert (root / 'index.html').is_file()
+          assert (root / 'assets/Ishtiaque-Ahmed-Navid-CV.pdf').is_file()
+          PY
+      - name: Commit imported website
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .nojekyll GITHUB-UPLOAD-INSTRUCTIONS.md ORIGINAL-ASSETS-SHA256.json README-GITHUB-PAGES.md api assets favicon.svg file.svg globe.svg index.html script.js style.css window.svg
+          git diff --cached --quiet && exit 0
+          git commit -m "Publish complete portfolio website and assets"
+          git push origin HEAD:main
