@@ -1,0 +1,142 @@
+{
+  "script.js": {
+    "bytes": 1822,
+    "sha256": "e953428bc85340001bafb24574692f6fac7b92c6961fe62b59da3e6005e782af"
+  },
+  "favicon.svg": {
+    "bytes": 712,
+    "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7"
+  },
+  "file.svg": {
+    "bytes": 392,
+    "sha256": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307"
+  },
+  "window.svg": {
+    "bytes": 386,
+    "sha256": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66"
+  },
+  "style.css": {
+    "bytes": 21796,
+    "sha256": "14a9bad6bedb310a7e48644edb824e41f0af193297563b7ae81cdc38b4e5d1f3"
+  },
+  "globe.svg": {
+    "bytes": 1036,
+    "sha256": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9"
+  },
+  "assets/Ishtiaque-Ahmed-Navid-CV.pdf": {
+    "bytes": 686078,
+    "sha256": "b86f9097c016d67b646d48fd77463aa3d70169033b41036c297dd253b0c87005"
+  },
+  "assets/uiu-logo.png": {
+    "bytes": 17040,
+    "sha256": "b95471692f07f0cd1ac58d4a0a5076feb683806866b90e1935300b93398b7949"
+  },
+  "assets/aps-logo.svg": {
+    "bytes": 14813,
+    "sha256": "b1fb4f1efef8036e87b1c549f851a015cfb11bdfb1b6f59b60a860314682beea"
+  },
+  "assets/focus-opto-original.webp": {
+    "bytes": 1652430,
+    "sha256": "4eb1888a9108f4ac9653de8906348ead90e2fce70dc2e62eb8170318b758c96d"
+  },
+  "assets/spie-logo.svg": {
+    "bytes": 4624,
+    "sha256": "0a29ad83327c8b5b9cd22e25819d834305ddda2aae997245ae1cf9e6493178e0"
+  },
+  "assets/focus-logic-continuous.webp": {
+    "bytes": 1838978,
+    "sha256": "06a6dac4b9a033237ea70fa9f0b271111010cafbde108151f664daa217331fe1"
+  },
+  "assets/toolkit-epitaxy.webp": {
+    "bytes": 1779390,
+    "sha256": "59fe14aad8669740dde43b37da916eb8ab850a17959c54ea6205ae5e1f7630a1"
+  },
+  "assets/gan-nanowires.svg": {
+    "bytes": 3335,
+    "sha256": "2ef4fd9ec89cd66e19751d325d5c8e6ce6bef738bf9b0eb6b75cf9d67b942fd9"
+  },
+  "assets/gaa-nanosheet.svg": {
+    "bytes": 4239,
+    "sha256": "b387790e1d9b4e824b07ff70fc1415212a9ea66e7d63241ae5fa3f2cb60eb4ed"
+  },
+  "assets/toolkit-characterization.webp": {
+    "bytes": 1456114,
+    "sha256": "345ea3fa2fc88b686f895e029cea3af2e791499a8ab558e0d48b0cb98567b649"
+  },
+  "assets/optica-logo.png": {
+    "bytes": 4632,
+    "sha256": "e293d1a6f552330892d39ba75c1b652f264d2edc163a1b043aef6b0e2706d6b9"
+  },
+  "assets/process-integration.svg": {
+    "bytes": 3738,
+    "sha256": "4ddfe01171c12f27ca8e660f8c390d04931e2bd9ea003d4a20989fa535a47bd5"
+  },
+  "assets/research-overview.svg": {
+    "bytes": 15099,
+    "sha256": "f83db111e18d8e6276cf621770ec9ec010132e8eaf582117e94154f3ce46bcb9"
+  },
+  "assets/profile.jpg": {
+    "bytes": 32912,
+    "sha256": "37a18be397f1c9bf2d01bde7a2f10f5edad4755ba7a7df3ad99d1f87036b6d9e"
+  },
+  "assets/focus-solar-original.webp": {
+    "bytes": 2213858,
+    "sha256": "f7b69b59f702f69338dc213ac373048af1dbb51d09778caddf4fb94f1cc48b43"
+  },
+  "assets/transport-modeling.svg": {
+    "bytes": 4964,
+    "sha256": "8b3fd2a1a4b7534cf846acc5a3a068fd701859b09223af4d7aca5e7838de7db9"
+  },
+  "assets/toolkit-modeling.webp": {
+    "bytes": 1648770,
+    "sha256": "5ecf64143de4b74f740d36532eb1040c690994ff09231e20d4ea30a43b948120"
+  },
+  "assets/efuse-otpm.svg": {
+    "bytes": 7937,
+    "sha256": "c9aedf00ac49f21f90092ed6c43d2c00edee69250488b9c9fefaf22e451ffd6d"
+  },
+  "assets/artificial-photosynthesis.svg": {
+    "bytes": 3333,
+    "sha256": "385acd5116363563fd56f454f82b5fe6ca7b9ad51c5ba211885d3980df8084d2"
+  },
+  "assets/focus-logic-original.webp": {
+    "bytes": 1980084,
+    "sha256": "a2227ff42495bc10a2073e4063a715eb2fcfc89877e25d4282b388859e3d23e7"
+  },
+  "assets/research-original-illustrations.png": {
+    "bytes": 3049640,
+    "sha256": "ea6f165749622dba466eaad67f8f95d44c690941f825698a3053aa9f942446b7"
+  },
+  "assets/toolkit-coursework.webp": {
+    "bytes": 1529552,
+    "sha256": "b75ccbf4afbfcf28c0bdda1b4900cbf2def89fd212e5cb813a74de3307c12475"
+  },
+  "assets/ibm-logo.svg": {
+    "bytes": 3735,
+    "sha256": "e8cf75280cbf46bf015f59859182ecec0c83c1b3d3d03323e151c6e91d4c339c"
+  },
+  "assets/focus-transport-original.webp": {
+    "bytes": 1485830,
+    "sha256": "63e8b1a36231dab2332f6e0b24dbb91067530715171b0f86d77e9d58ff2de697"
+  },
+  "assets/buet-logo.svg": {
+    "bytes": 13313,
+    "sha256": "c5cbfea573dc81efb9c5955956496771d7077a67a568d5a6c9a1d480bc4f8c8c"
+  },
+  "assets/toolkit-memberships.webp": {
+    "bytes": 1619886,
+    "sha256": "23c2165902c6e6d6aa76d79987e9f51837291c91071185734e20bb8feb9721d6"
+  },
+  "assets/umich-logo.png": {
+    "bytes": 7897,
+    "sha256": "9b418c3ec8a13dc590ecf7d66c1caef62a6eb33d264376a94a17a6b8d75f5bda"
+  },
+  "assets/focus-efuse-original.webp": {
+    "bytes": 1722122,
+    "sha256": "5959335118431b40f5773bb13bc98be652c4b249fa4937215743e6b927e77ef1"
+  },
+  "assets/toolkit-electrochemistry.webp": {
+    "bytes": 1506096,
+    "sha256": "c20a1697bf1827d3bd63076c1972d7e65afcd7c8c556d798719c73ad5f75fa9e"
+  }
+}

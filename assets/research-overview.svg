@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1450"><title>Semiconductor research across devices, energy and materials</title><defs><linearGradient id="base" x2="1" y2="1"><stop stop-color="#071421"/><stop offset="1" stop-color="#193449"/></linearGradient><radialGradient id="halo"><stop stop-color="#55cdd7" stop-opacity=".2"/><stop offset="1" stop-color="#55cdd7" stop-opacity="0"/></radialGradient></defs><rect width="1600" height="1450" fill="url(#base)"/><ellipse cx="800" cy="650" rx="800" ry="620" fill="url(#halo)"/><g font-family="Arial,Helvetica,sans-serif"><text x="70" y="86" fill="#d5e8ee" font-size="24" letter-spacing="5">A RESEARCH LANDSCAPE</text><text x="70" y="158" fill="#ffffff" font-size="56" font-weight="700">Engineering matter. Enabling possibilities.</text><path d="M70 191H1530" stroke="#456172"/></g><rect x="60" y="230" width="720" height="540" rx="22" fill="#0b1c2b" stroke="#8bddff" stroke-opacity=".28"/><rect x="84" y="256" width="4" height="35" fill="#8bddff"/><text x="107" y="284" fill="#8bddff" font-family="Arial" font-size="27" font-weight="700">ADVANCED SEMICONDUCTORS</text><clipPath id="clip01"><rect x="75" y="304" width="690" height="385" rx="14"/></clipPath><g clip-path="url(#clip01)"><svg x="75" y="304" width="690" height="385" viewBox="0 135 1200 620" preserveAspectRatio="xMidYMid meet">
+<defs>
+  <linearGradient id="f01-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06111f"/><stop offset="1" stop-color="#102a3d"/></linearGradient>
+  <linearGradient id="f01-sheet" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#54e1ff"/><stop offset=".5" stop-color="#9ef5ff"/><stop offset="1" stop-color="#4ca7ff"/></linearGradient>
+  <linearGradient id="f01-gate" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d6e5ef"/><stop offset="1" stop-color="#70859a"/></linearGradient>
+  <filter id="f01-glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="f01-grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#7cc7e6" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1200" height="760" rx="42" fill="url(#f01-bg)"/>
+<rect x="28" y="28" width="1144" height="704" rx="32" fill="url(#f01-grid)"/>
+
+
+
+<!-- substrate -->
+<path d="M180 600 L930 600 L1060 675 L310 675 Z" fill="#263c4e" stroke="#547184" stroke-width="3"/>
+<path d="M180 600 L930 600 L930 650 L180 650 Z" fill="#182b3b"/>
+
+
+<!-- source drain -->
+<path d="M170 260 L320 260 L320 555 L170 555 Z" fill="#3f5667" stroke="#90a9ba" stroke-width="3"/>
+<path d="M850 260 L1000 260 L1000 555 L850 555 Z" fill="#3f5667" stroke="#90a9ba" stroke-width="3"/>
+
+
+
+<!-- nanosheets -->
+<g filter="url(#f01-glow)">
+ <rect x="295" y="330" width="610" height="54" rx="12" fill="url(#f01-sheet)" opacity=".95"/>
+ <rect x="295" y="410" width="610" height="54" rx="12" fill="url(#f01-sheet)" opacity=".95"/>
+ <rect x="295" y="490" width="610" height="54" rx="12" fill="url(#f01-sheet)" opacity=".95"/>
+</g>
+
+
+
+
+<!-- gate surround -->
+<path d="M390 205 Q360 205 360 235 L360 560 Q360 590 390 590 L810 590 Q840 590 840 560 L840 235 Q840 205 810 205 Z M430 245 L770 245 Q790 245 790 265 L790 530 Q790 550 770 550 L430 550 Q410 550 410 530 L410 265 Q410 245 430 245 Z" fill="url(#f01-gate)" fill-rule="evenodd" stroke="#e4f0f6" stroke-width="3" opacity=".88"/>
+
+
+<!-- inner spacer -->
+<g fill="#a5b9c6" opacity=".9">
+ <rect x="318" y="312" width="52" height="20" rx="5"/><rect x="830" y="312" width="52" height="20" rx="5"/>
+ <rect x="318" y="392" width="52" height="20" rx="5"/><rect x="830" y="392" width="52" height="20" rx="5"/>
+ <rect x="318" y="472" width="52" height="20" rx="5"/><rect x="830" y="472" width="52" height="20" rx="5"/>
+</g>
+
+<!-- callouts -->
+<g font-family="Arial,sans-serif">
+ <path d="M985 170 L865 245" stroke="#7feaff" stroke-width="2"/><circle cx="985" cy="170" r="5" fill="#7feaff"/>
+ 
+ 
+ <path d="M130 420 L295 438" stroke="#7feaff" stroke-width="2"/><circle cx="130" cy="420" r="5" fill="#7feaff"/>
+ 
+ 
+</g>
+</svg></g><path d="M90 695H750" stroke="#344f62"/><text x="90" y="737" fill="#d1dfe7" font-family="Arial" font-size="27">GAA nanosheets · Multi-Vt · eFuse / OTP</text><rect x="820" y="230" width="720" height="540" rx="22" fill="#0b1c2b" stroke="#c9e89c" stroke-opacity=".28"/><rect x="844" y="256" width="4" height="35" fill="#c9e89c"/><text x="867" y="284" fill="#c9e89c" font-family="Arial" font-size="27" font-weight="700">LIGHT-DRIVEN ENERGY</text><clipPath id="clip02"><rect x="835" y="304" width="690" height="385" rx="14"/></clipPath><g clip-path="url(#clip02)"><svg x="835" y="304" width="690" height="385" viewBox="0 135 1200 620" preserveAspectRatio="xMidYMid meet">
+<defs>
+ <linearGradient id="f02-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06151b"/><stop offset="1" stop-color="#123e42"/></linearGradient>
+ <linearGradient id="f02-water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#42d5e8" stop-opacity=".5"/><stop offset="1" stop-color="#0a6472" stop-opacity=".75"/></linearGradient>
+ <radialGradient id="f02-sun"><stop stop-color="#fff8c0"/><stop offset=".22" stop-color="#ffe86b" stop-opacity=".9"/><stop offset="1" stop-color="#ffe86b" stop-opacity="0"/></radialGradient>
+ <filter id="f02-glow"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<rect width="1200" height="760" rx="42" fill="url(#f02-bg)"/>
+
+
+
+<!-- sun -->
+<circle cx="160" cy="210" r="150" fill="url(#f02-sun)" filter="url(#f02-glow)"/><circle cx="160" cy="210" r="62" fill="#fff5a2"/>
+<g stroke="#ffe67b" stroke-width="6" stroke-linecap="round"><path d="M160 118V75M160 345V388M68 210H25M252 210H295M95 145L65 115M225 275L255 305M225 145L255 115M95 275L65 305"/></g>
+
+<!-- water chamber -->
+<path d="M250 470 Q600 420 950 470 L900 690 L300 690 Z" fill="url(#f02-water)" stroke="#79e8f1" stroke-width="3"/>
+<path d="M250 470 Q600 420 950 470" fill="none" stroke="#b5fbff" stroke-width="4"/>
+
+
+<!-- semiconductor catalyst plate -->
+<path d="M430 405 L770 405 L730 545 L470 545 Z" fill="#39c9d5" stroke="#c4ffff" stroke-width="3"/>
+<g fill="#d7ffff">
+ <circle cx="485" cy="440" r="7"/><circle cx="525" cy="470" r="7"/><circle cx="565" cy="440" r="7"/><circle cx="605" cy="475" r="7"/><circle cx="645" cy="440" r="7"/><circle cx="685" cy="470" r="7"/>
+</g>
+
+
+<!-- charge flow -->
+<g fill="none" stroke-linecap="round">
+ <path d="M250 290 C350 300 430 345 500 405" stroke="#ffe36b" stroke-width="7"/>
+ <path d="M950 290 C850 300 770 345 700 405" stroke="#7ff6ff" stroke-width="7"/>
+</g>
+<g font-family="Arial,sans-serif">
+ 
+ 
+</g>
+
+<!-- gas bubbles -->
+<g fill="none" stroke="#c8ffff" stroke-width="3">
+ <circle cx="420" cy="390" r="13"/><circle cx="390" cy="355" r="9"/><circle cx="450" cy="350" r="8"/>
+ <circle cx="780" cy="390" r="13"/><circle cx="810" cy="355" r="9"/><circle cx="750" cy="350" r="8"/>
+</g>
+
+
+
+<!-- footer metrics -->
+<g font-family="Arial,sans-serif">
+ 
+</g>
+</svg></g><path d="M850 695H1510" stroke="#344f62"/><text x="850" y="737" fill="#d1dfe7" font-family="Arial" font-size="27">GaN / InGaN · Solar fuels · Tandem devices</text><rect x="60" y="820" width="720" height="540" rx="22" fill="#0b1c2b" stroke="#c6b8ff" stroke-opacity=".28"/><rect x="84" y="846" width="4" height="35" fill="#c6b8ff"/><text x="107" y="874" fill="#c6b8ff" font-family="Arial" font-size="27" font-weight="700">NANOSTRUCTURE OPTOELECTRONICS</text><clipPath id="clip03"><rect x="75" y="894" width="690" height="385" rx="14"/></clipPath><g clip-path="url(#clip03)"><svg x="75" y="894" width="690" height="385" viewBox="0 135 1200 620" preserveAspectRatio="xMidYMid meet">
+<defs>
+ <linearGradient id="f03-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#09152a"/><stop offset="1" stop-color="#0a3d4b"/></linearGradient>
+ <linearGradient id="f03-wire" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#3cc9ff"/><stop offset=".55" stop-color="#8af4ff"/><stop offset="1" stop-color="#d9fbff"/></linearGradient>
+ <radialGradient id="f03-sun"><stop stop-color="#fff7b1"/><stop offset=".3" stop-color="#ffe86b" stop-opacity=".8"/><stop offset="1" stop-color="#ffe86b" stop-opacity="0"/></radialGradient>
+ <filter id="f03-blur"><feGaussianBlur stdDeviation="10"/></filter>
+ <pattern id="f03-hex" width="48" height="42" patternUnits="userSpaceOnUse"><path d="M12 1h24l12 20-12 20H12L0 21z" fill="none" stroke="#a9f2ff" stroke-opacity=".09"/></pattern>
+</defs>
+<rect width="1200" height="760" rx="42" fill="url(#f03-bg)"/>
+<rect x="28" y="28" width="1144" height="704" rx="32" fill="url(#f03-hex)"/>
+
+
+
+<!-- sunlight -->
+<circle cx="1020" cy="150" r="150" fill="url(#f03-sun)" filter="url(#f03-blur)"/>
+<circle cx="1020" cy="150" r="72" fill="#fff4a5" opacity=".92"/>
+<g stroke="#ffe77a" stroke-width="7" stroke-linecap="round" opacity=".7">
+ <path d="M1020 40v-38M1020 298v38M910 150h-38M1130 150h38M942 72l-28-28M1098 228l28 28M1098 72l28-28M942 228l-28 28"/>
+</g>
+
+<!-- substrate -->
+<path d="M120 565 L1080 565 L1000 670 L200 670 Z" fill="#18394a" stroke="#5f8da0" stroke-width="3"/>
+<path d="M120 565 L1080 565 L1050 605 L150 605 Z" fill="#29556a"/>
+
+
+<!-- nanowires -->
+<g>
+ <g fill="url(#f03-wire)" stroke="#bff8ff" stroke-width="2">
+  <path d="M200 565 L225 245 L250 565 Z"/><path d="M290 565 L315 185 L340 565 Z"/><path d="M380 565 L405 270 L430 565 Z"/>
+  <path d="M470 565 L495 150 L520 565 Z"/><path d="M560 565 L585 220 L610 565 Z"/><path d="M650 565 L675 175 L700 565 Z"/>
+  <path d="M740 565 L765 250 L790 565 Z"/><path d="M830 565 L855 190 L880 565 Z"/><path d="M920 565 L945 270 L970 565 Z"/>
+ </g>
+ <g stroke="#d9ffff" stroke-width="6" opacity=".45">
+  <path d="M225 245L225 565"/><path d="M315 185L315 565"/><path d="M405 270L405 565"/><path d="M495 150L495 565"/><path d="M585 220L585 565"/><path d="M675 175L675 565"/><path d="M765 250L765 565"/><path d="M855 190L855 565"/><path d="M945 270L945 565"/>
+ </g>
+</g>
+
+<!-- photons -->
+<g stroke="#fff2a6" stroke-width="4" stroke-linecap="round" opacity=".8">
+ <path d="M1000 245L920 310"/><path d="M1050 270L970 335"/><path d="M930 220L850 285"/><path d="M1090 230L1010 295"/>
+</g>
+<g font-family="Arial,sans-serif">
+ 
+ 
+ 
+ 
+</g>
+</svg></g><path d="M90 1285H750" stroke="#344f62"/><text x="90" y="1327" fill="#d1dfe7" font-family="Arial" font-size="27">Deep-nano networks · Micro-LEDs · MBE</text><rect x="820" y="820" width="720" height="540" rx="22" fill="#0b1c2b" stroke="#ffcd94" stroke-opacity=".28"/><rect x="844" y="846" width="4" height="35" fill="#ffcd94"/><text x="867" y="874" fill="#ffcd94" font-family="Arial" font-size="27" font-weight="700">THERMAL &amp; ELECTRONIC TRANSPORT</text><clipPath id="clip04"><rect x="835" y="894" width="690" height="385" rx="14"/></clipPath><g clip-path="url(#clip04)"><svg x="835" y="894" width="690" height="385" viewBox="0 135 1200 620" preserveAspectRatio="xMidYMid meet">
+<defs>
+  <linearGradient id="f04-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06121f"/><stop offset="1" stop-color="#111d38"/></linearGradient>
+  <radialGradient id="f04-heat"><stop stop-color="#ffcc73" stop-opacity=".65"/><stop offset="1" stop-color="#ff5f6d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="f04-layer" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#59d9ef"/><stop offset=".5" stop-color="#a6f4ff"/><stop offset="1" stop-color="#4f8cff"/></linearGradient>
+  <marker id="f04-arrowC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#7eeeff"/></marker>
+  <marker id="f04-arrowH" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#ffc76a"/></marker>
+</defs>
+<rect width="1200" height="760" rx="30" fill="url(#f04-bg)"/>
+<g opacity=".07" stroke="#9bdff0"><path d="M0 130h1200M0 260h1200M0 390h1200M0 520h1200M0 650h1200"/><path d="M100 0v760M220 0v760M340 0v760M460 0v760M580 0v760M700 0v760M820 0v760M940 0v760M1060 0v760"/></g>
+
+
+<!-- material slab -->
+<g transform="translate(90 205)">
+  <rect width="700" height="350" rx="24" fill="#0a1c2e" stroke="#2b4961"/>
+  
+  
+  <g transform="translate(45 105)" stroke="#3f7891" stroke-width="2" fill="#102f45">
+    <g>
+      <circle cx="30" cy="30" r="12"/><circle cx="90" cy="30" r="12"/><circle cx="150" cy="30" r="12"/><circle cx="210" cy="30" r="12"/><circle cx="270" cy="30" r="12"/><circle cx="330" cy="30" r="12"/><circle cx="390" cy="30" r="12"/><circle cx="450" cy="30" r="12"/><circle cx="510" cy="30" r="12"/>
+      <circle cx="60" cy="82" r="12"/><circle cx="120" cy="82" r="12"/><circle cx="180" cy="82" r="12"/><circle cx="240" cy="82" r="12"/><circle cx="300" cy="82" r="12"/><circle cx="360" cy="82" r="12"/><circle cx="420" cy="82" r="12"/><circle cx="480" cy="82" r="12"/>
+      <circle cx="30" cy="134" r="12"/><circle cx="90" cy="134" r="12"/><circle cx="150" cy="134" r="12"/><circle cx="210" cy="134" r="12"/><circle cx="270" cy="134" r="12"/><circle cx="330" cy="134" r="12"/><circle cx="390" cy="134" r="12"/><circle cx="450" cy="134" r="12"/><circle cx="510" cy="134" r="12"/>
+    </g>
+    <g stroke="#365d70" opacity=".9"><path d="M30 30L60 82M60 82L90 30M90 30L120 82M120 82L150 30M150 30L180 82M180 82L210 30M210 30L240 82M240 82L270 30M270 30L300 82M300 82L330 30M330 30L360 82M360 82L390 30M390 30L420 82M420 82L450 30M450 30L480 82M480 82L510 30M30 134L60 82M60 82L90 134M90 134L120 82M120 82L150 134M150 134L180 82M180 82L210 134M210 134L240 82M240 82L270 134M270 134L300 82M300 82L330 134M330 134L360 82M360 82L390 134M390 134L420 82M420 82L450 134M450 134L480 82M480 82L510 134"/></g>
+  </g>
+  <circle cx="340" cy="245" r="120" fill="url(#f04-heat)"/>
+  <path d="M120 245 C250 205 360 270 500 225" fill="none" stroke="#7eeeff" stroke-width="5" marker-end="url(#f04-arrowC)"/>
+  <path d="M165 275 C260 320 410 300 565 260" fill="none" stroke="#ffc76a" stroke-width="5" marker-end="url(#f04-arrowH)"/>
+  
+  
+</g>
+<!-- model stack -->
+<g transform="translate(845 190)">
+  <rect width="285" height="380" rx="24" fill="#0c1d30" stroke="#29445d"/>
+  
+  <g font-family="Arial,sans-serif" font-size="14">
+    <rect x="28" y="80" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/>
+    <rect x="28" y="150" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/>
+    <rect x="28" y="220" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/>
+    <rect x="28" y="290" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/>
+  </g>
+</g>
+
+</svg></g><path d="M850 1285H1510" stroke="#344f62"/><text x="850" y="1327" fill="#d1dfe7" font-family="Arial" font-size="27">Graphene · h-BN · Stanene · MD / DFT</text><path d="M420 782V800H1180V782M420 820V800M1180 820V800" stroke="#7199ab" fill="none" stroke-width="2"/><rect x="565" y="778" width="470" height="46" rx="23" fill="#c8dfad"/><text x="800" y="809" text-anchor="middle" fill="#142435" font-size="26" font-family="Arial" font-weight="700">MATERIALS → DEVICES → IMPACT</text><text x="800" y="1420" text-anchor="middle" fill="#a9c5d5" font-size="25" font-family="Arial" letter-spacing="1">EPITAXY  /  FABRICATION  /  CHARACTERIZATION  /  MODELING</text></svg>

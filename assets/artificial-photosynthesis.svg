@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06151b"/><stop offset="1" stop-color="#123e42"/></linearGradient>
+ <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#42d5e8" stop-opacity=".5"/><stop offset="1" stop-color="#0a6472" stop-opacity=".75"/></linearGradient>
+ <radialGradient id="sun"><stop stop-color="#fff8c0"/><stop offset=".22" stop-color="#ffe86b" stop-opacity=".9"/><stop offset="1" stop-color="#ffe86b" stop-opacity="0"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<rect width="1200" height="760" rx="42" fill="url(#bg)"/>
+<text x="72" y="88" fill="#aaf7e9" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">SOLAR-TO-CHEMICAL ENERGY</text>
+<text x="72" y="124" fill="#c7d8e5" font-family="Arial,sans-serif" font-size="17">Conceptual photoelectrochemical water-splitting pathway</text>
+
+<!-- sun -->
+<circle cx="160" cy="210" r="150" fill="url(#sun)" filter="url(#glow)"/><circle cx="160" cy="210" r="62" fill="#fff5a2"/>
+<g stroke="#ffe67b" stroke-width="6" stroke-linecap="round"><path d="M160 118V75M160 345V388M68 210H25M252 210H295M95 145L65 115M225 275L255 305M225 145L255 115M95 275L65 305"/></g>
+
+<!-- water chamber -->
+<path d="M250 470 Q600 420 950 470 L900 690 L300 690 Z" fill="url(#water)" stroke="#79e8f1" stroke-width="3"/>
+<path d="M250 470 Q600 420 950 470" fill="none" stroke="#b5fbff" stroke-width="4"/>
+<text x="525" y="665" fill="#bceff2" font-family="Arial,sans-serif" font-size="19" font-weight="700">H₂O</text>
+
+<!-- semiconductor catalyst plate -->
+<path d="M430 405 L770 405 L730 545 L470 545 Z" fill="#39c9d5" stroke="#c4ffff" stroke-width="3"/>
+<g fill="#d7ffff">
+ <circle cx="485" cy="440" r="7"/><circle cx="525" cy="470" r="7"/><circle cx="565" cy="440" r="7"/><circle cx="605" cy="475" r="7"/><circle cx="645" cy="440" r="7"/><circle cx="685" cy="470" r="7"/>
+</g>
+<text x="510" y="520" fill="#062b32" font-family="Arial,sans-serif" font-size="17" font-weight="700">III-NITRIDE PHOTOELECTRODE</text>
+
+<!-- charge flow -->
+<g fill="none" stroke-linecap="round">
+ <path d="M250 290 C350 300 430 345 500 405" stroke="#ffe36b" stroke-width="7"/>
+ <path d="M950 290 C850 300 770 345 700 405" stroke="#7ff6ff" stroke-width="7"/>
+</g>
+<g font-family="Arial,sans-serif">
+ <text x="285" y="275" fill="#fff0a3" font-size="19" font-weight="700">photons</text>
+ <text x="815" y="275" fill="#b9ffff" font-size="19" font-weight="700">charge separation</text>
+</g>
+
+<!-- gas bubbles -->
+<g fill="none" stroke="#c8ffff" stroke-width="3">
+ <circle cx="420" cy="390" r="13"/><circle cx="390" cy="355" r="9"/><circle cx="450" cy="350" r="8"/>
+ <circle cx="780" cy="390" r="13"/><circle cx="810" cy="355" r="9"/><circle cx="750" cy="350" r="8"/>
+</g>
+<text x="342" y="330" fill="#d7ffff" font-family="Arial,sans-serif" font-size="18" font-weight="700">H₂ evolution</text>
+<text x="786" y="330" fill="#d7ffff" font-family="Arial,sans-serif" font-size="18" font-weight="700">O₂ evolution</text>
+
+<!-- footer metrics -->
+<g font-family="Arial,sans-serif">
+ <text x="72" y="715" fill="#8eabb3" font-size="14">sunlight → semiconductor absorption → carrier separation → chemical fuel</text>
+</g>
+</svg>

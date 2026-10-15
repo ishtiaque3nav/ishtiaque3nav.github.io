@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06121f"/><stop offset="1" stop-color="#111d38"/></linearGradient>
+  <radialGradient id="heat"><stop stop-color="#ffcc73" stop-opacity=".65"/><stop offset="1" stop-color="#ff5f6d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="layer" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#59d9ef"/><stop offset=".5" stop-color="#a6f4ff"/><stop offset="1" stop-color="#4f8cff"/></linearGradient>
+  <marker id="arrowC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#7eeeff"/></marker>
+  <marker id="arrowH" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#ffc76a"/></marker>
+</defs>
+<rect width="1200" height="760" rx="30" fill="url(#bg)"/>
+<g opacity=".07" stroke="#9bdff0"><path d="M0 130h1200M0 260h1200M0 390h1200M0 520h1200M0 650h1200"/><path d="M100 0v760M220 0v760M340 0v760M460 0v760M580 0v760M700 0v760M820 0v760M940 0v760M1060 0v760"/></g>
+<text x="58" y="78" fill="#a7f5e2" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="4">THERMAL + ELECTRONIC TRANSPORT</text>
+<text x="58" y="112" fill="#8fa9bf" font-family="Arial,sans-serif" font-size="18">Atomistic modeling of low-dimensional nanomaterials</text>
+<!-- material slab -->
+<g transform="translate(90 205)">
+  <rect width="700" height="350" rx="24" fill="#0a1c2e" stroke="#2b4961"/>
+  <text x="28" y="44" fill="#d7e7f5" font-family="Arial,sans-serif" font-size="20" font-weight="700">NANOMATERIAL</text>
+  <text x="28" y="70" fill="#6e8aa2" font-family="Arial,sans-serif" font-size="14">graphene · h-BN · stanene · related 2D systems</text>
+  <g transform="translate(45 105)" stroke="#3f7891" stroke-width="2" fill="#102f45">
+    <g>
+      <circle cx="30" cy="30" r="12"/><circle cx="90" cy="30" r="12"/><circle cx="150" cy="30" r="12"/><circle cx="210" cy="30" r="12"/><circle cx="270" cy="30" r="12"/><circle cx="330" cy="30" r="12"/><circle cx="390" cy="30" r="12"/><circle cx="450" cy="30" r="12"/><circle cx="510" cy="30" r="12"/>
+      <circle cx="60" cy="82" r="12"/><circle cx="120" cy="82" r="12"/><circle cx="180" cy="82" r="12"/><circle cx="240" cy="82" r="12"/><circle cx="300" cy="82" r="12"/><circle cx="360" cy="82" r="12"/><circle cx="420" cy="82" r="12"/><circle cx="480" cy="82" r="12"/>
+      <circle cx="30" cy="134" r="12"/><circle cx="90" cy="134" r="12"/><circle cx="150" cy="134" r="12"/><circle cx="210" cy="134" r="12"/><circle cx="270" cy="134" r="12"/><circle cx="330" cy="134" r="12"/><circle cx="390" cy="134" r="12"/><circle cx="450" cy="134" r="12"/><circle cx="510" cy="134" r="12"/>
+    </g>
+    <g stroke="#365d70" opacity=".9"><path d="M30 30L60 82M60 82L90 30M90 30L120 82M120 82L150 30M150 30L180 82M180 82L210 30M210 30L240 82M240 82L270 30M270 30L300 82M300 82L330 30M330 30L360 82M360 82L390 30M390 30L420 82M420 82L450 30M450 30L480 82M480 82L510 30M30 134L60 82M60 82L90 134M90 134L120 82M120 82L150 134M150 134L180 82M180 82L210 134M210 134L240 82M240 82L270 134M270 134L300 82M300 82L330 134M330 134L360 82M360 82L390 134M390 134L420 82M420 82L450 134M450 134L480 82M480 82L510 134"/></g>
+  </g>
+  <circle cx="340" cy="245" r="120" fill="url(#heat)"/>
+  <path d="M120 245 C250 205 360 270 500 225" fill="none" stroke="#7eeeff" stroke-width="5" marker-end="url(#arrowC)"/>
+  <path d="M165 275 C260 320 410 300 565 260" fill="none" stroke="#ffc76a" stroke-width="5" marker-end="url(#arrowH)"/>
+  <text x="105" y="318" fill="#7eeeff" font-family="Arial,sans-serif" font-size="14">electronic transport</text>
+  <text x="445" y="318" fill="#ffc76a" font-family="Arial,sans-serif" font-size="14">thermal transport</text>
+</g>
+<!-- model stack -->
+<g transform="translate(845 190)">
+  <rect width="285" height="380" rx="24" fill="#0c1d30" stroke="#29445d"/>
+  <text x="26" y="46" fill="#d7e7f5" font-family="Arial,sans-serif" font-size="19" font-weight="700">MODELING STACK</text>
+  <g font-family="Arial,sans-serif" font-size="14">
+    <rect x="28" y="80" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/><text x="45" y="113" fill="#a7f5e2">MD · phonons · heat flow</text>
+    <rect x="28" y="150" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/><text x="45" y="183" fill="#7eeeff">DFT · bands · carriers</text>
+    <rect x="28" y="220" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/><text x="45" y="253" fill="#d6c7ff">atomistic → device insight</text>
+    <rect x="28" y="290" width="229" height="55" rx="12" fill="#132d43" stroke="#42637c"/><text x="45" y="323" fill="#ffc76a">thermal/electronic coupling</text>
+  </g>
+</g>
+<text x="58" y="704" fill="#708da5" font-family="Arial,sans-serif" font-size="15">Molecular dynamics · DFT · phonon transport · electronic structure · nanoscale thermal management</text>
+</svg>
