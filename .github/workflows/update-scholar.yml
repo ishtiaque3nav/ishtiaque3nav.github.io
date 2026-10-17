@@ -32,12 +32,12 @@ jobs:
       - name: Validate last verified snapshot (no API request)
         run: python scripts/update_scholar.py --check-file
       - name: Fetch and verify daily Scholar metrics
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[scholar-refresh]')
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
         run: python scripts/update_scholar.py
       - name: Commit verified metrics to main
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[scholar-refresh]')
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
