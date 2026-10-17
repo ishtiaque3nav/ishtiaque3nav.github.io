@@ -26,7 +26,7 @@ updateScholarMetrics();
 setInterval(()=>{if(!document.hidden)updateScholarMetrics()},15*60*1000);
 
 /* Visitor counter: approximate unique visitors, starting when installed.
-   CounterAPI anonymizes identifying data; this sends no API key and
+   Uses CounterAPI's approximate unique modifier; this sends no API key and
    avoids a second counted request on reloads within a 30-minute tab session. */
 async function updateVisitorCounter(){
  const number=document.getElementById('visitor-count');
@@ -46,7 +46,7 @@ async function updateVisitorCounter(){
   if(!response.ok)throw new Error('Counter unavailable');
   const data=await response.json();
   const raw=data&&data.value;
-  if(!(typeof raw==='number'&&Number.isSafeInteger(raw))&&!(typeof raw==='string'&&/^\\d+$/.test(raw)))throw new Error('Invalid count');
+  if(!(typeof raw==='number'&&Number.isSafeInteger(raw))&&!(typeof raw==='string'&&/^\d+$/.test(raw)))throw new Error('Invalid count');
   const count=Number(raw);
   if(!Number.isSafeInteger(count)||count<0)throw new Error('Invalid count');
   number.textContent=count.toLocaleString('en-US');
