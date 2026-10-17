@@ -11,11 +11,16 @@ async function updateScholarMetrics(){
   if(!response.ok)throw new Error('Unavailable');
   const data=await response.json();
   const values=[data.citations,data.hIndex,data.i10Index];
-  if(!values.every(v=>Number.isSafeInteger(v)&&v>=0)||!Number.isFinite(Date.parse(data.updatedAt)))throw new Error('Invalid data');
+  const verifiedAt=Date.parse(data.updatedAt);
+  if(!values.every(v=>Number.isSafeInteger(v)&&v>=0)||!Number.isFinite(verifiedAt)||verifiedAt>Date.now()+5*60*1000)throw new Error('Invalid data');
   ['scholar-citations','scholar-h-index','scholar-i10-index'].forEach((id,i)=>document.getElementById(id).textContent=values[i].toLocaleString('en-US'));
-  const date=new Date(data.updatedAt).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
-  status.textContent=`Last verified ${date} · Saved citation snapshot`;
- }catch{status.textContent='Last verified October 13, 2026 · Refresh unavailable; showing last verified counts';}
+  const date=new Date(verifiedAt).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
+  const hoursSince=(Date.now()-verifiedAt)/3600000;
+  const label=data.lastAttemptOk!==true?'Automatic daily sync awaiting first successful run':hoursSince>48?'Automatic daily update delayed · Showing last verified counts':'Daily automatic verification · All-time counts';
+  status.textContent=`Last verified ${date} · ${label}`;
+ }catch{
+  status.textContent='Latest citation data unavailable · Showing October 15, 2026 baseline';
+ }
 }
 updateScholarMetrics();
 setInterval(()=>{if(!document.hidden)updateScholarMetrics()},15*60*1000);
