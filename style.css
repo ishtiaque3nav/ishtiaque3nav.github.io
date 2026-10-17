@@ -40,3 +40,41 @@ body{font-size:18px}nav{font-size:16px;gap:20px}.brand{font-size:19px}.eyebrow,.
 /* Illustrated technical toolkit. */
 .toolkit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}.toolkit-card{min-width:0;border:1px solid #dce1dc;border-radius:12px;overflow:hidden;background:#fcfcf9;box-shadow:0 7px 24px rgba(20,36,53,.045)}.toolkit-art{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:var(--paper);border-bottom:1px solid #e1e5df}.toolkit-copy{padding:28px 30px 30px}.toolkit-copy h3{font-size:25px;line-height:1.3;letter-spacing:-.6px;margin:0 0 18px;color:var(--ink)}.toolkit-copy p{font-size:18px;line-height:1.8;color:var(--muted);margin:0 0 16px}.toolkit-copy p:last-child{margin-bottom:0}@media(max-width:760px){.toolkit-grid{grid-template-columns:1fr;gap:26px}.toolkit-copy{padding:24px}.toolkit-copy h3{font-size:24px}}
 .membership-logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:36px 28px;background:var(--paper);border-bottom:1px solid var(--line);aspect-ratio:3/2;align-content:center}.membership-logo-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-width:0;padding:22px 12px;border:1px solid #dce1dc;border-radius:8px;background:var(--paper)}.membership-logo-tile img{width:100%;max-width:190px;height:66px;object-fit:contain}.membership-logo-tile span{text-align:center;font-size:14px;line-height:1.5;color:var(--muted)}.michigan-membership img{max-width:72px;height:76px}@media(max-width:480px){.membership-logos{padding:24px 18px;gap:14px;aspect-ratio:auto}.membership-logo-tile{padding:20px 10px}.membership-logo-tile img{height:55px}.membership-logo-tile span{font-size:13px}}
+
+
+/* Recognition / editorial photography gallery. Scoped to this section. */
+.honors .recognition-shell{display:block}
+.honors .recognition-heading{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.75fr);gap:clamp(30px,7vw,110px);align-items:end;margin-bottom:42px}
+.honors .recognition-kicker{display:inline-block;margin-bottom:22px;color:#365540}
+.honors .recognition-heading h2{font-size:clamp(39px,4.2vw,64px);line-height:1.1;letter-spacing:-.055em;font-weight:500;margin:0}
+.honors .recognition-heading__aside p{font-size:clamp(15px,1.25vw,18px);line-height:1.65;color:#455b4c;max-width:360px;margin:20px 0}
+.honors .recognition-heading__rule{display:block;width:64px;height:2px;background:#6a8a6f}
+.honors .recognition-heading__note{display:flex;justify-content:space-between;max-width:360px;letter-spacing:.11em;font:12px/1.5 'Courier New',monospace;color:#4e6d56}
+.honors .recognition-gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;align-items:stretch}
+.honors .recognition-tile{margin:0;min-width:0;border-radius:15px;overflow:hidden;background:#fafaf5;border:1px solid #cad4c5;box-shadow:0 6px 22px rgba(19,41,28,.075);transition:transform .4s ease,box-shadow .4s ease}
+.honors .recognition-tile:hover{transform:translateY(-5px);box-shadow:0 20px 42px rgba(19,41,28,.16)}
+.honors .recognition-tile--lead{grid-column:span 7}
+.honors .recognition-tile--community{grid-column:span 5}
+.honors .recognition-tile--lab,.honors .recognition-tile--robocar,.honors .recognition-tile--leader{grid-column:span 4}
+.honors .recognition-tile__photo{height:235px;overflow:hidden;background:#17332f;position:relative}
+.honors .recognition-tile--lead .recognition-tile__photo,.honors .recognition-tile--community .recognition-tile__photo{height:370px}
+.honors .recognition-tile__photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.honors .recognition-tile:hover .recognition-tile__photo img{transform:scale(1.035)}
+.honors .recognition-tile--lead img{object-position:50% 43%}
+.honors .recognition-tile--community img{object-position:50% 51%}
+.honors .recognition-tile--lab img{object-position:62% 50%}
+.honors .recognition-tile--robocar img,.honors .recognition-tile--leader img{object-fit:contain}
+.honors .recognition-tile--robocar .recognition-tile__photo{background:#242b30}
+.honors .recognition-tile--leader .recognition-tile__photo{background:#052a4b}
+.honors .recognition-tile figcaption{padding:20px 22px 22px;min-height:122px;border-top:3px solid #a9c58d}
+.honors .recognition-tile figcaption span{display:block;font:11px/1.4 'Courier New',monospace;letter-spacing:.085em;color:#52785b;margin-bottom:10px}
+.honors .recognition-tile figcaption strong{display:block;font-size:clamp(18px,1.7vw,23px);line-height:1.23;letter-spacing:-.035em;font-weight:500;color:#142435}
+.honors .recognition-tile figcaption small{display:block;margin-top:9px;font-size:13px;line-height:1.5;color:#68766a}
+.honors .recognition-distinction{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr);gap:clamp(30px,6vw,95px);margin-top:84px;padding-top:32px;border-top:1px solid #b9c8b1}
+.honors .recognition-distinction__heading{padding-top:12px}
+.honors .recognition-distinction__heading h3{font-size:clamp(28px,3vw,44px);line-height:1.12;letter-spacing:-.04em;font-weight:500;margin:20px 0}
+.honors .recognition-distinction__heading p{max-width:285px;color:#586a54;line-height:1.7;font-size:15px}
+.honors .recognition-distinction .award-list{min-width:0}
+@media(max-width:1000px){.honors .recognition-tile--lead,.honors .recognition-tile--community{grid-column:span 6}.honors .recognition-tile--lab,.honors .recognition-tile--robocar{grid-column:span 6}.honors .recognition-tile--leader{grid-column:span 12}.honors .recognition-tile--lead .recognition-tile__photo,.honors .recognition-tile--community .recognition-tile__photo{height:310px}.honors .recognition-tile--leader .recognition-tile__photo{height:300px}.honors .recognition-distinction{grid-template-columns:1fr;gap:20px}.honors .recognition-distinction__heading p{max-width:550px}}
+@media(max-width:650px){.honors .recognition-heading{grid-template-columns:1fr;gap:22px;margin-bottom:28px}.honors .recognition-heading h2{letter-spacing:-.045em}.honors .recognition-gallery{grid-template-columns:1fr;gap:17px}.honors .recognition-tile--lead,.honors .recognition-tile--community,.honors .recognition-tile--lab,.honors .recognition-tile--robocar,.honors .recognition-tile--leader{grid-column:auto}.honors .recognition-tile__photo,.honors .recognition-tile--lead .recognition-tile__photo,.honors .recognition-tile--community .recognition-tile__photo,.honors .recognition-tile--leader .recognition-tile__photo{height:auto;aspect-ratio:3/2}.honors .recognition-tile--lab .recognition-tile__photo{aspect-ratio:16/9}.honors .recognition-tile--leader .recognition-tile__photo{aspect-ratio:16/10}.honors .recognition-tile figcaption{min-height:0;padding:18px}.honors .recognition-distinction{margin-top:58px}.honors .recognition-distinction__heading{padding-top:0}}
+@media(prefers-reduced-motion:reduce){.honors .recognition-tile,.honors .recognition-tile__photo img{transition:none!important}.honors .recognition-tile:hover,.honors .recognition-tile:hover .recognition-tile__photo img{transform:none!important}}
