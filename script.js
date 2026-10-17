@@ -24,3 +24,36 @@ async function updateScholarMetrics(){
 }
 updateScholarMetrics();
 setInterval(()=>{if(!document.hidden)updateScholarMetrics()},15*60*1000);
+
+/* Visitor counter: approximate unique visitors, starting when installed.
+   CounterAPI anonymizes identifying data; this sends no API key and
+   avoids a second counted request on reloads within a 30-minute tab session. */
+async function updateVisitorCounter(){
+ const number=document.getElementById('visitor-count');
+ const note=document.getElementById('visitor-count-note');
+ if(!number||!note)return;
+ const storageKey='ian-portfolio-counter-last-visit';
+ let recentVisit=false;
+ try{
+  const last=Number(sessionStorage.getItem(storageKey));
+  recentVisit=Number.isFinite(last)&&last>0&&Date.now()-last<30*60*1000;
+ }catch{}
+ const url=new URL('https://counterapi.com/api/ishtiaque3nav.github.io/view/portfolio-home');
+ url.searchParams.set('unique','true');
+ if(recentVisit)url.searchParams.set('readOnly','true');
+ try{
+  const response=await fetch(url.toString(),{cache:'no-store',signal:AbortSignal.timeout(10000),referrerPolicy:'strict-origin-when-cross-origin'});
+  if(!response.ok)throw new Error('Counter unavailable');
+  const data=await response.json();
+  const raw=data&&data.value;
+  if(!(typeof raw==='number'&&Number.isSafeInteger(raw))&&!(typeof raw==='string'&&/^\\d+$/.test(raw)))throw new Error('Invalid count');
+  const count=Number(raw);
+  if(!Number.isSafeInteger(count)||count<0)throw new Error('Invalid count');
+  number.textContent=count.toLocaleString('en-US');
+  note.textContent='Estimated distinct visitors · Since Oct 2026';
+  if(!recentVisit){try{sessionStorage.setItem(storageKey,String(Date.now()))}catch{}}
+ }catch{
+  note.textContent='Count temporarily unavailable · Since Oct 2026';
+ }
+}
+updateVisitorCounter();
