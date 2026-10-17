@@ -86,3 +86,22 @@ footer .footer-visitor__label{font:10px/1.4 'Courier New',monospace;letter-spaci
 footer .footer-visitor__number{font:500 clamp(23px,2.2vw,29px)/1.1 Arial,Helvetica,sans-serif;letter-spacing:-.035em;color:var(--ink);font-variant-numeric:tabular-nums}
 footer .footer-visitor__note{font:10px/1.45 Arial,Helvetica,sans-serif;color:var(--muted);max-width:200px}
 @media(max-width:760px){footer .footer-identity{flex-basis:100%}footer .footer-visitor{flex:0 1 auto;min-width:0;padding:0;border:0;margin-right:auto}footer .footer-visitor__note{max-width:none}}
+
+/* Compact expandable publication sections */
+.publications .publication-list-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:42px 0 18px}
+.publications .publication-list-heading .subheading{margin:0}
+.publications .publication-list-heading>span{font:11px/1.5 'Courier New',monospace;color:#52785b;letter-spacing:.04em}
+.publications .publication-dropdown{margin:18px 0 30px}
+.publications .publication-dropdown>summary{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;border:1px solid #b9c9b7;border-radius:9px;background:#eaf0e5;color:#244634;font:600 14px/1.5 Arial,Helvetica,sans-serif;cursor:pointer;list-style:none}
+.publications .publication-dropdown>summary::-webkit-details-marker{display:none}
+.publications .publication-dropdown>summary:hover{background:#dfebd8}
+.publications .publication-dropdown>summary:focus-visible{outline:3px solid #438a68;outline-offset:4px}
+.publications .publication-chevron{font-size:23px;line-height:1;transition:transform .2s}
+.publications .publication-label-open{display:none}
+.publications .publication-dropdown[open] .publication-label-closed{display:none}
+.publications .publication-dropdown[open] .publication-label-open{display:inline}
+.publications .publication-dropdown[open] .publication-chevron{transform:rotate(180deg)}
+.publications .publication-dropdown-content{padding-top:12px}
+.publications .publication-dropdown-content .conference-list{margin-top:0}
+@media(max-width:650px){.publications .publication-list-heading{align-items:flex-start;flex-direction:column;gap:6px}.publications .publication-dropdown>summary{padding:14px 16px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.publications .publication-chevron{transition:none}}
