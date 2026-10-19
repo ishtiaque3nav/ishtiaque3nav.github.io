@@ -25,33 +25,6 @@ async function updateScholarMetrics(){
 updateScholarMetrics();
 setInterval(()=>{if(!document.hidden)updateScholarMetrics()},15*60*1000);
 
-/* Preserve original CounterAPI identity and last verified local count; no resets. */
-async function updateVisitorCounter(){
- const number=document.getElementById('visitor-count'),note=document.getElementById('visitor-count-note');
- if(!number||!note)return;
- const key='ian-portfolio-counter-last-verified',visitKey='ian-portfolio-counter-last-visit';
- const valid=v=>typeof v==='number'&&Number.isSafeInteger(v)&&v>=0?v:typeof v==='string'&&/^\d+$/.test(v)&&Number.isSafeInteger(Number(v))?Number(v):null;
- let saved=null;
- try{
-  const x=JSON.parse(localStorage.getItem(key)||'null'),n=valid(x&&x.count);
-  if(n!==null&&Number.isFinite(Date.parse(x.at))){saved={count:n,at:x.at};number.textContent=n.toLocaleString('en-US');note.textContent='Last verified on this device · '+new Date(x.at).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
- }catch{}
- let recent=false;
- try{const last=Number(sessionStorage.getItem(visitKey));recent=last>0&&Date.now()-last<30*60*1000;}catch{}
- const url=new URL('https://counterapi.com/api/ishtiaque3nav.github.io/view/portfolio-home');
- url.searchParams.set('unique','true');
- if(recent)url.searchParams.set('readOnly','true');
- try{
-  const response=await fetch(url.toString(),{cache:'no-store',signal:AbortSignal.timeout(10000),referrerPolicy:'strict-origin-when-cross-origin'});
-  if(!response.ok)throw Error('Counter service unavailable');
-  const data=await response.json(),n=valid(data&&data.value);
-  if(n===null)throw Error('Invalid counter data');
-  number.textContent=n.toLocaleString('en-US');
-  note.textContent='Estimated distinct visitors · Since Oct 2026';
-  try{localStorage.setItem(key,JSON.stringify({count:n,at:new Date().toISOString()}));if(!recent)sessionStorage.setItem(visitKey,String(Date.now()));}catch{}
- }catch{
-  if(saved){note.textContent='Last verified on this device · Live service temporarily unavailable';}
-  else{number.textContent='—';note.textContent='Visitor service unavailable · Historical count remains at provider';}
- }
-}
-updateVisitorCounter();
+/* Historical counter retained for future reconciliation:
+   https://counterapi.com/api/ishtiaque3nav.github.io/view/portfolio-home
+   Do not reset this identifier or combine its unverified total with new page views. */

@@ -46,21 +46,6 @@ jobs:
             git commit -m 'Refresh verified all-time Scholar metrics'
             git push origin HEAD:main
           fi
-      - name: Probe independent hit counter (test-only path)
-        run: |
-          python - <<'PY'
-          import urllib.request
-          url='https://hits.sh/ishtiaque3nav.github.io/portfolio-counter-probe-20261019.svg?style=flat&label=test'
-          req=urllib.request.Request(url,headers={'Accept':'image/svg+xml','User-Agent':'Mozilla/5.0'})
-          with urllib.request.urlopen(req,timeout=20) as response:
-              body=response.read(100000)
-              print('Badge provider status:',response.status)
-              print('Badge content type:',response.headers.get('Content-Type'))
-              print('Badge bytes:',len(body))
-              if response.status!=200 or b'<svg' not in body[:3000] or b'</svg>' not in body:
-                  raise ValueError('Unexpected badge response')
-              print('VALIDATED: live counter SVG returned.')
-          PY
       - name: Prepare only public static website files
         run: |
           mkdir -p _site

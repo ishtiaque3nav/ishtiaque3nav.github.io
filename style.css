@@ -105,3 +105,7 @@ footer .footer-visitor__note{font:10px/1.45 Arial,Helvetica,sans-serif;color:var
 .publications .publication-dropdown-content .conference-list{margin-top:0}
 @media(max-width:650px){.publications .publication-list-heading{align-items:flex-start;flex-direction:column;gap:6px}.publications .publication-dropdown>summary{padding:14px 16px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.publications .publication-chevron{transition:none}}
+
+/* Live visitor badge: static image request, no client-side API dependency. */
+footer .footer-visitor__badge{display:block;min-height:24px;line-height:0;margin:5px 0 3px}
+footer .footer-visitor__badge img{display:block;width:auto;height:24px;max-width:100%;object-fit:contain}
