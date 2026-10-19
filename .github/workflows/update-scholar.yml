@@ -31,22 +31,6 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Validate last verified snapshot (no API request)
         run: python scripts/update_scholar.py --check-file
-      - name: Diagnose legacy visitor counter (read-only; no increments)
-        run: |
-          python - <<'PY'
-          import urllib.request, urllib.error, json
-          base = 'https://counterapi.com/api/ishtiaque3nav.github.io/view/portfolio-home'
-          for query in ('?readOnly=true&unique=true', '?readOnly=true'):
-              req = urllib.request.Request(base + query, headers={'Origin':'https://ishtiaque3nav.github.io', 'Accept':'application/json'})
-              try:
-                  with urllib.request.urlopen(req, timeout=15) as r:
-                      body = r.read(4000).decode('utf-8','replace')
-                      print('Legacy counter',query,'status',r.status,'content-type',r.headers.get('Content-Type'),'CORS',r.headers.get('Access-Control-Allow-Origin'),'body',body[:600])
-              except urllib.error.HTTPError as ex:
-                  print('Legacy counter',query,'HTTP',ex.code,'body',ex.read(600).decode('utf-8','replace'))
-              except Exception as ex:
-                  print('Legacy counter',query,type(ex).__name__,str(ex)[:200])
-          PY
       - name: Fetch and verify daily Scholar metrics
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[scholar-refresh]')
         env:
