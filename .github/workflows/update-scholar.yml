@@ -27,6 +27,26 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Import uploaded Michigan seal artwork
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[import-umich-seal]')
+        run: |
+          curl --fail --location --retry 3 --retry-all-errors --connect-timeout 12 --max-time 60 \
+            --user-agent 'PortfolioSiteUpdater/1.0 (personal site image)' \
+            --output assets/umich-seal.svg \
+            'https://upload.wikimedia.org/wikipedia/commons/9/93/Seal_of_the_University_of_Michigan.svg'
+          python - <<'PY'
+          from pathlib import Path
+          data=Path("assets/umich-seal.svg").read_bytes()
+          assert 20000 < len(data) < 200000, "Unexpected image size"
+          assert b'<svg' in data and b'</svg>' in data, "Not valid SVG"
+          assert b'<script' not in data.lower(), "Active SVG content"
+          print("Verified transparent university seal SVG, bytes:",len(data))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/umich-seal.svg
+          git commit -m 'Add vector University of Michigan seal'
+          git push origin HEAD:main
       - name: Test Scholar parser (no API request)
         run: python -m unittest discover -s tests -v
       - name: Validate last verified snapshot (no API request)
