@@ -1,0 +1,37 @@
+name: Prepare Metricool public media test
+on:
+  push:
+    paths:
+      - '.github/workflows/plh-metricool-media-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  media:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install Pillow
+      - name: Render direct JPEG media
+        run: |
+          python - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          import os
+          os.makedirs('metricool-media/diagnostic',exist_ok=True)
+          im=Image.new('RGB',(1080,1350),'#112944')
+          d=ImageDraw.Draw(im)
+          d.rounded_rectangle((100,130,980,1210),radius=70,fill='#f4f0e5')
+          d.rounded_rectangle((160,260,920,540),radius=45,fill='#f5c54b')
+          d.text((185,335),'PRO LIFE HACKS',fill='#122d48',font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',66))
+          d.text((190,660),'Media delivery test',fill='#122d48',font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',50))
+          im.save('metricool-media/diagnostic/test.jpg','JPEG',quality=88)
+          PY
+      - name: Commit test media
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metricool-media/diagnostic/test.jpg
+          git diff --cached --quiet || (git commit -m "Add Metricool public JPEG media test" && git push)
